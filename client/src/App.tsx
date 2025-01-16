@@ -1,14 +1,17 @@
 import "./App.css";
-import Providers from "./Providers";
-import Navigation from "./components/ui/custom/navigation";
+
+import { ThemeProvider } from "@/components/theme-provider";
+import { RouterProvider } from "react-router/dom";
+import { createBrowserRouter } from "react-router";
+import routes from "@/Routes";
+
+const router = createBrowserRouter(routes);
 
 function App() {
   return (
-    <Providers>
-      <div className="text-neutral-700 dark:text-neutral-200 bg-neutral-200 dark:bg-neutral-900">
-        <Navigation />
-      </div>
-    </Providers>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 
