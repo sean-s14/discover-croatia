@@ -6,6 +6,5 @@
 # What to do next?
 
 - Create cypress tests for navigation.
-- Provide navigation for mobile view.
 
 # Issues
